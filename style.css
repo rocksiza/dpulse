@@ -67,15 +67,51 @@ article p {
   color: #8474b4;
 }
 
+/* Other CSS stays the same */
+
 #about {
   background-color: #f6eeef;
   padding: 15px;
   border-radius: 20px;
   margin: 15px;
-  color: #72557a; /* This changes the text color */
+  color: #72557a;
 }
 
-#about img {
+#about .about-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-img-wrapper {
   border: 2px solid #837d9d;
   border-radius: 10px;
 }
+
+#about img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Other CSS stays the same */
+
+.about-img-wrapper:first-child {
+  margin-right: 10px;
+}
+
+.about-img-wrapper:last-child {
+  margin-left: 10px;
+}
+
+
