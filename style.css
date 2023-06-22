@@ -37,10 +37,12 @@ nav ul li a:hover {
   color: #b49d73;
 }
 
-h1, h2 {
-  text-align: center;
+h1 {
+  font-size: 3em; /* Increase the font size */
+  color: #e4d49e; /* Change the color */
+  text-shadow: 2px 2px 4px #837d9d; /* Add a text shadow */
   padding: 15px 0;
-  color: #837d9d;
+  text-align: center;
 }
 
 article {
@@ -78,40 +80,60 @@ article p {
 }
 
 #about .about-content {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
 }
 
 .about-text {
-  flex: 1;
-  margin-right: 15px;
-}
-
-.about-images {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  background-color: #f6eeef;
+  padding: 15px;
+  border-radius: 20px;
 }
 
 .about-img-wrapper {
-  border: 2px solid #837d9d;
+  position: absolute;
+  right: -20px; /* Adjust this value to move the images further to the right */
+  border: 3px solid #837d9d; /* Increase border width and choose darker color */
   border-radius: 10px;
 }
 
-#about img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Other CSS stays the same */
-
 .about-img-wrapper:first-child {
-  margin-right: 10px;
+  top: 0; 
 }
 
 .about-img-wrapper:last-child {
-  margin-left: 10px;
+  top: 50px; /* Adjust this value to stagger the images vertically */
 }
 
+#audioPlayer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
+.player-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  background-color: #72557a;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.control-button {
+  background-color: #e4d49e;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #72557a;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.control-button:hover {
+  background-color: #b49d73;
+}
