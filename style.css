@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  background: url('background2.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  color: #f6eeef;
+}
+
+nav {
+  background-color: #72557a;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #e4d49e;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #b49d73;
+}
+
+h1, h2 {
+  text-align: center;
+  padding: 15px 0;
+  color: #837d9d;
+}
+
+article {
+  background-color: #b194b1;
+  border: 2px solid #bf6f89;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+article:hover {
+  transform: scale(1.02);
+}
+
+article h2 {
+  border-bottom: 1px solid #837d9d;
+  padding-bottom: 10px;
+}
+
+article p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #8474b4;
+}
+
+#about {
+  background-color: #f6eeef;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 15px;
+  color: #72557a; /* This changes the text color */
+}
+
+#about img {
+  border: 2px solid #837d9d;
+  border-radius: 10px;
+}
