@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NikoStyle</title>
+  <title>PixelPulse</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     </ul>
   </nav>
 
-  <h1>Welcome to NikoStyle!</h1>
+  <h1>pixelpulse</h1>
 
   <section id="about">
     <h2>About Me</h2>
@@ -23,13 +23,53 @@
       </div>
       <div class="about-images">
         <div class="about-img-wrapper">
-          <img src="niko_picture1.jpg" alt="A picture of Niko">
-        </div>
-        <div class="about-img-wrapper">
-          <img src="niko_picture2.jpg" alt="Another picture of Niko">
+          <img src="IMG_2864_25.jpg" alt="Another picture of Niko">
         </div>
       </div>
     </div>
   </section>
+
+  <audio id="audioPlayer" class="music-player">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="player-controls">
+    <button id="playButton" class="control-button">Play</button>
+    <button id="pauseButton" class="control-button">Pause</button>
+  </div>
+
+  <script>
+    let audioFiles = ["unknown.mp3"];
+    let audioPlayer;
+    let playButton = document.getElementById('playButton');
+    let pauseButton = document.getElementById('pauseButton');
+
+    function shuffle(array) {
+        array.sort(() => Math.random() - 0.5);
+    }
+
+    function loadNextSong() {
+        if (audioFiles.length > 0) {
+            let nextSong = audioFiles.pop();
+            audioPlayer.src = nextSong;
+        }
+    }
+
+    window.onload = function() {
+        audioPlayer = document.getElementById('audioPlayer');
+        audioPlayer.addEventListener('ended', loadNextSong);
+
+        shuffle(audioFiles);
+        loadNextSong();
+    }
+
+    playButton.addEventListener('click', function() {
+      audioPlayer.play();
+    });
+
+    pauseButton.addEventListener('click', function() {
+      audioPlayer.pause();
+    });
+  </script>
 </body>
 </html>
