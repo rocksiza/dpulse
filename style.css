@@ -160,7 +160,6 @@ h1 {
   z-index: 999;
 }
 
-
 #modal {
   position: relative;
   background-color: transparent;
@@ -177,6 +176,11 @@ h1 {
   object-fit: contain;
 }
 
+#modalContainer.active #modalImage {
+  position: relative;
+  top: -65px; /* Adjust this value to raise or lower the superguy.gif image */
+}
+
 #speechBubbleImage {
   position: absolute;
   bottom: -20px;
@@ -190,7 +194,6 @@ h1 {
 #modalContainer.active #modal #speechBubbleImage {
   opacity: 1;
 }
-
 
 #slideImage {
   display: none;
@@ -220,3 +223,4 @@ h1 {
 #modal #modalText a:hover {
   color: #e4d49e;
 }
+

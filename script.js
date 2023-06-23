@@ -5,8 +5,8 @@ let modal = document.getElementById('modal');
 let modalImage = document.getElementById('modalImage');
 let overlay = document.getElementById('overlay'); // Get the overlay element
 let features = [
-    "superguy.png",
-    "superguy.png"
+    "superguy.gif",
+    "superguy.gif"
     // add more images here...
 ];
 
