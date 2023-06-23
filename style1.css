@@ -135,3 +135,41 @@ article p {
 .control-button:hover {
   background-color: #f1c65d;
 }
+
+// get the elements from the DOM
+let showModal = document.getElementById('showModal');
+let modalContainer = document.getElementById('modalContainer');
+let modal = document.getElementById('modal');
+let modalImage = document.getElementById('modalImage');
+let modalText = document.getElementById('modalText');
+let features = [
+    { 
+        "image": "feature1.jpg",
+        "description": "This is feature 1."
+    },
+    { 
+        "image": "feature2.jpg",
+        "description": "This is feature 2."
+    }
+    // add more feature objects here...
+];
+
+showModal.addEventListener('click', () => {
+    // generate a random index within the range of the features array
+    let index = Math.floor(Math.random() * features.length);
+
+    // set the image and text in the modal based on the random feature
+    modalImage.src = features[index].image;
+    modalText.innerText = features[index].description;
+
+    // show the modal
+    modalContainer.style.display = 'flex';
+});
+
+modalContainer.addEventListener('click', (event) => {
+    // if the click event happened on the modalContainer itself (and not a child element),
+    // or on the overlay, hide the modal
+    if (event.target == modalContainer || event.target.id == 'overlay') {
+        modalContainer.style.display = 'none';
+    }
+});

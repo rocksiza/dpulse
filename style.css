@@ -38,38 +38,12 @@ nav ul li a:hover {
 }
 
 h1 {
-  font-size: 3em; /* Increase the font size */
-  color: #e4d49e; /* Change the color */
-  text-shadow: 2px 2px 4px #837d9d; /* Add a text shadow */
+  font-size: 3em;
+  color: #e4d49e;
+  text-shadow: 2px 2px 4px #837d9d;
   padding: 15px 0;
   text-align: center;
 }
-
-article {
-  background-color: #b194b1;
-  border: 2px solid #bf6f89;
-  border-radius: 20px;
-  padding: 15px;
-  margin: 15px;
-  transition: transform 0.3s ease-in-out;
-}
-
-article:hover {
-  transform: scale(1.02);
-}
-
-article h2 {
-  border-bottom: 1px solid #837d9d;
-  padding-bottom: 10px;
-}
-
-article p {
-  font-size: 1em;
-  line-height: 1.5;
-  color: #8474b4;
-}
-
-/* Other CSS stays the same */
 
 #about {
   background-color: #f6eeef;
@@ -91,8 +65,8 @@ article p {
 
 .about-img-wrapper {
   position: absolute;
-  right: -20px; /* Adjust this value to move the images further to the right */
-  border: 3px solid #837d9d; /* Increase border width and choose darker color */
+  right: -20px;
+  border: 3px solid #837d9d;
   border-radius: 10px;
 }
 
@@ -101,7 +75,7 @@ article p {
 }
 
 .about-img-wrapper:last-child {
-  top: 50px; /* Adjust this value to stagger the images vertically */
+  top: 50px;
 }
 
 #audioPlayer {
@@ -122,18 +96,127 @@ article p {
   padding: 10px;
   border-radius: 20px;
 }
-
 .control-button {
   background-color: #e4d49e;
   border: none;
   padding: 10px;
   border-radius: 10px;
   color: #72557a;
-  font-family: 'Orbitron', sans-serif;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 .control-button:hover {
   background-color: #b49d73;
+}
+
+#showModal {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto;
+  background-color: #72557a;
+  color: #f6eeef;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#showModal:hover {
+  background-color: #e4d49e;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#modalContainer {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  transform: translateX(100%);
+}
+
+#modalContainer.active {
+  display: block;
+  animation: slideInFromRight 0.5s ease-out forwards;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+
+#modal {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  width: auto;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+#modal img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+#speechBubbleImage {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  width: 100px;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#modalContainer.active #modal #speechBubbleImage {
+  opacity: 1;
+}
+
+
+#slideImage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 2000;
+}
+
+#slideImage.active {
+  display: block;
+}
+
+#modal #modalText {
+  margin-top: 20px;
+}
+
+#modal #modalText a {
+  color: #f6eeef;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#modal #modalText a:hover {
+  color: #e4d49e;
 }
