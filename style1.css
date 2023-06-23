@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 body {
-  background: url('background2.jpg') no-repeat center center fixed; 
+  background: url('9447453515_d6e39ed56b_o.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Orbitron', sans-serif;
-  color: #f6eeef;
+  color: #453c35;
 }
 
 nav {
-  background-color: #72557a;
+  background-color: #91b697;
   padding: 10px;
   text-align: center;
   border-radius: 20px;
@@ -28,26 +28,26 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #e4d49e;
+  color: #c2d199;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
 nav ul li a:hover {
-  color: #b49d73;
+  color: #f1c65d;
 }
 
 h1 {
-  font-size: 3em; /* Increase the font size */
-  color: #e4d49e; /* Change the color */
-  text-shadow: 2px 2px 4px #837d9d; /* Add a text shadow */
+  font-size: 3em;
+  color: #c2d199;
+  text-shadow: 2px 2px 4px #69a1bf;
   padding: 15px 0;
   text-align: center;
 }
 
 article {
-  background-color: #b194b1;
-  border: 2px solid #bf6f89;
+  background-color: #c4d9e2;
+  border: 2px solid #d57471;
   border-radius: 20px;
   padding: 15px;
   margin: 15px;
@@ -59,24 +59,22 @@ article:hover {
 }
 
 article h2 {
-  border-bottom: 1px solid #837d9d;
+  border-bottom: 1px solid #69a1bf;
   padding-bottom: 10px;
 }
 
 article p {
   font-size: 1em;
   line-height: 1.5;
-  color: #8474b4;
+  color: #ae5d5a;
 }
 
-/* Other CSS stays the same */
-
 #about {
-  background-color: #f6eeef;
+  background-color: #c2d199;
   padding: 15px;
   border-radius: 20px;
   margin: 15px;
-  color: #72557a;
+  color: #453c35;
 }
 
 #about .about-content {
@@ -84,15 +82,15 @@ article p {
 }
 
 .about-text {
-  background-color: #f6eeef;
+  background-color: #c2d199;
   padding: 15px;
   border-radius: 20px;
 }
 
 .about-img-wrapper {
   position: absolute;
-  right: -20px; /* Adjust this value to move the images further to the right */
-  border: 3px solid #837d9d; /* Increase border width and choose darker color */
+  right: -20px;
+  border: 3px solid #69a1bf;
   border-radius: 10px;
 }
 
@@ -101,7 +99,7 @@ article p {
 }
 
 .about-img-wrapper:last-child {
-  top: 50px; /* Adjust this value to stagger the images vertically */
+  top: 50px;
 }
 
 #audioPlayer {
@@ -118,22 +116,22 @@ article p {
   display: flex;
   justify-content: space-around;
   width: 200px;
-  background-color: #72557a;
+  background-color: #91b697;
   padding: 10px;
   border-radius: 20px;
 }
 
 .control-button {
-  background-color: #e4d49e;
+  background-color: #c2d199;
   border: none;
   padding: 10px;
   border-radius: 10px;
-  color: #72557a;
+  color: #453c35;
   font-family: 'Orbitron', sans-serif;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 .control-button:hover {
-  background-color: #b49d73;
+  background-color: #f1c65d;
 }
